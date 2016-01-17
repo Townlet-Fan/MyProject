@@ -1,0 +1,16 @@
+//
+//  my-prefix.pch
+//  MyDemoCollection
+//
+//  Created by 樊振 on 16/1/10.
+//  Copyright © 2016年 kuibu. All rights reserved.
+//
+
+#ifndef my_prefix_pch
+#define my_prefix_pch
+
+#import "UIView+ITTAdditions.h"
+#import "KBTools.h"
+#import "Utilities.h"
+
+#endif /* my_prefix_pch */

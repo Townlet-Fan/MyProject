@@ -8,7 +8,6 @@
 
 #import "KBTableViewCell.h"
 #import "UserModel.h"
-#import "KBConstant.h"
 #import "UIView+ITTAdditions.h"
 @interface KBTableViewCell()
 //用户名

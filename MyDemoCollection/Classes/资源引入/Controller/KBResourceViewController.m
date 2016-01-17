@@ -7,7 +7,7 @@
 //
 
 #import "KBResourceViewController.h"
-
+#import "KB_BlockTest.h"
 @interface KBResourceViewController ()
 
 @end
@@ -16,7 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 64, 100, 100)];
+    button.backgroundColor = [UIColor redColor];
+    [button addTarget:self action:@selector(pushInto) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,6 +28,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)pushInto
+{
+    [self.navigationController pushViewController:[[KB_BlockTest alloc] init] animated:YES];
+}
 /*
 #pragma mark - Navigation
 

@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+@class DDMenuController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (strong, nonatomic) UINavigationController *nav;
+
+@property (strong, nonatomic) DDMenuController *ddMenuController;
 
 @end
 

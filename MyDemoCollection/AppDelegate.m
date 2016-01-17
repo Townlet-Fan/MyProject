@@ -14,7 +14,8 @@
 #import "KBMyTableViewController.h"
 #import "KBResourceViewController.h"
 #import "KBTools.h"
-
+#import "DDMenuController.h"
+#import "KBMenuTableViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -46,9 +47,11 @@
     tabBarController.viewControllers = [NSArray arrayWithObjects:homeVC,resourceVC,myTableVC,nil];
     
     //设置导航栏
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:tabBarController];
-    self.window.rootViewController = nav;
-    
+    _nav = [[UINavigationController alloc] initWithRootViewController:tabBarController];
+    _ddMenuController = [[DDMenuController alloc] initWithRootViewController:_nav];
+    _ddMenuController.leftViewController = [[KBMenuTableViewController alloc] init];
+    self.window.rootViewController = _ddMenuController;
+    //self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
     return YES;
 }
 

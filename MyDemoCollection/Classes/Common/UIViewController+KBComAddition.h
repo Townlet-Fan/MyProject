@@ -10,4 +10,12 @@
 
 @interface UIViewController (KBComAddition)
 
+- (void)setLeftButtonWithTitle:(NSString *)title action:(SEL)action;
+- (void)setLeftButtonWithImageName:(NSString *)imageName action:(SEL)action;
+
+- (void)setRightButtonWithTitle:(NSString *)title action:(SEL)action;
+- (void)setRightButtonWithImageName:(NSString *)imageName action:(SEL)action;
+
+- (void)setTitleViewWithTitle:(NSString *)title;
+
 @end
